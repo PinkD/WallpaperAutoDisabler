@@ -1,0 +1,44 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="ignore_fullscreen_event" xml:space="preserve">
+        <value>功能未启用，忽略全屏事件</value>
+    </data>
+    <data name="Enabled" xml:space="preserve">
+        <value>已启用</value>
+    </data>
+    <data name="Disabled" xml:space="preserve">
+        <value>已禁用</value>
+    </data>
+    <data name="fullscreen_fmt" xml:space="preserve">
+        <value>全屏模式: {0}</value>
+    </data>
+    <data name="get_user_notification_state" xml:space="preserve">
+        <value>无法获取用户通知状态，返回值为: {0}</value>
+    </data>
+    <data name="enable_wallpaper" xml:space="preserve">
+        <value>启用壁纸</value>
+    </data>
+    <data name="disable_wallpaper" xml:space="preserve">
+        <value>禁用壁纸</value>
+    </data>
+    <data name="Disable" xml:space="preserve">
+        <value>禁用</value>
+    </data>
+    <data name="Enable" xml:space="preserve">
+        <value>启用</value>
+    </data>
+    <data name="Exit" xml:space="preserve">
+        <value>退出</value>
+    </data>
+</root>
