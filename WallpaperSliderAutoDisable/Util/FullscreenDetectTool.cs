@@ -38,7 +38,7 @@ namespace WallpaperSliderAutoDisable.util {
             // detect state every 5 second
             worker.DoWork += (sender, args) => {
                 while (true) {
-                    Thread.Sleep(500);
+                    Thread.Sleep(5000);
                     DetectFullscreen();
                 }
             };
@@ -64,7 +64,14 @@ namespace WallpaperSliderAutoDisable.util {
 
             Console.WriteLine(state);
 
-            return state == QueryUserNotificationStatState.QUNS_BUSY || state == QueryUserNotificationStatState.QUNS_RUNNING_D3D_FULL_SCREEN;
+            switch (state) {
+                case QueryUserNotificationStatState.QUNS_BUSY:
+                case QueryUserNotificationStatState.QUNS_PRESENTATION_MODE:
+                case QueryUserNotificationStatState.QUNS_RUNNING_D3D_FULL_SCREEN:
+                    return true;
+                default:
+                    return false;
+            }
         }
     }
 }
