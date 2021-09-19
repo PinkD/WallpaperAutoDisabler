@@ -1,10 +1,7 @@
-using System;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading;
-using System.Windows;
+using NLog;
 using WallpaperSliderAutoDisable.Properties;
 
 namespace WallpaperSliderAutoDisable.util {
@@ -24,6 +21,7 @@ namespace WallpaperSliderAutoDisable.util {
             out QueryUserNotificationStatState state
         );
 
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         public delegate void OnFullscreenChange(bool fullscreen);
 
@@ -38,7 +36,7 @@ namespace WallpaperSliderAutoDisable.util {
             // detect state every 5 second
             worker.DoWork += (sender, args) => {
                 while (true) {
-                    Thread.Sleep(5000);
+                    Thread.Sleep(Config.Delay);
                     DetectFullscreen();
                 }
             };
@@ -47,7 +45,7 @@ namespace WallpaperSliderAutoDisable.util {
 
         private void DetectFullscreen() {
             var fc = IsFullscreen();
-            Console.WriteLine(Resources.fullscreen_fmt, fc);
+            Logger.Debug(Resources.fullscreen_fmt, fc);
             if (fc == _fullscreen) {
                 return;
             }
@@ -59,10 +57,10 @@ namespace WallpaperSliderAutoDisable.util {
         private static bool IsFullscreen() {
             var ret = SHQueryUserNotificationState(out var state);
             if (ret != 0) {
-                Console.WriteLine(Resources.get_user_notification_state, ret);
+                Logger.Debug(Resources.get_user_notification_state, ret);
             }
 
-            Console.WriteLine(state);
+            Logger.Debug(state);
 
             switch (state) {
                 case QueryUserNotificationStatState.QUNS_BUSY:

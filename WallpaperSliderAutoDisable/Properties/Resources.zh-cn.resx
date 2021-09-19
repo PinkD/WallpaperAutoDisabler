@@ -32,13 +32,16 @@
     <data name="disable_wallpaper" xml:space="preserve">
         <value>禁用壁纸</value>
     </data>
-    <data name="Disable" xml:space="preserve">
-        <value>禁用</value>
-    </data>
-    <data name="Enable" xml:space="preserve">
-        <value>启用</value>
-    </data>
     <data name="Exit" xml:space="preserve">
         <value>退出</value>
+    </data>
+    <data name="ShortcutMode" xml:space="preserve">
+        <value>快捷键模式</value>
+    </data>
+    <data name="switch_status" xml:space="preserve">
+        <value>切换状态：{0}</value>
+    </data>
+    <data name="AutoMode" xml:space="preserve">
+        <value>自动模式</value>
     </data>
 </root>

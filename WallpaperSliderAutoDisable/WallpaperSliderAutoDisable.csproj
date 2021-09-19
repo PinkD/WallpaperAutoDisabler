@@ -39,10 +39,18 @@
             <HintPath>..\packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net35\Hardcodet.Wpf.TaskbarNotification.dll</HintPath>
             <Private>True</Private>
         </Reference>
+        <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c">
+            <HintPath>..\packages\NLog.4.7.11\lib\net35\NLog.dll</HintPath>
+            <Private>True</Private>
+        </Reference>
         <Reference Include="System"/>
+        <Reference Include="System.Configuration"/>
         <Reference Include="System.Core"/>
         <Reference Include="System.Data"/>
         <Reference Include="System.Drawing"/>
+        <Reference Include="System.Runtime.Serialization"/>
+        <Reference Include="System.ServiceModel"/>
+        <Reference Include="System.Transactions"/>
         <Reference Include="System.Windows.Forms"/>
         <Reference Include="System.Xml"/>
         <Reference Include="System.Xaml">
@@ -57,9 +65,12 @@
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
         </ApplicationDefinition>
+        <Compile Include="Util\Config.cs"/>
         <Compile Include="Util\FullscreenDetectTool.cs"/>
         <Compile Include="Util\IDesktopWallpaper.cs"/>
         <Compile Include="Util\IWallpaperTool.cs"/>
+        <Compile Include="Util\KeyboardHook.cs"/>
+        <Compile Include="Util\Shortcut.cs"/>
         <Page Include="MainWindow.xaml">
             <Generator>MSBuild:Compile</Generator>
             <SubType>Designer</SubType>
@@ -83,10 +94,12 @@
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
         <EmbeddedResource Include="Properties\Resources.resx">
-            <Generator>ResXFileCodeGenerator</Generator>
+            <Generator>PublicResXFileCodeGenerator</Generator>
             <LastGenOutput>Resources.Designer.cs</LastGenOutput>
         </EmbeddedResource>
-        <EmbeddedResource Include="Properties\Resources.zh-cn.resx"/>
+        <EmbeddedResource Include="Properties\Resources.zh-cn.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
     </ItemGroup>
     <ItemGroup>
         <None Include="App.config"/>
@@ -97,6 +110,11 @@
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Resource>
         <None Remove="Icons\*.ico"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="NLog.config">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>

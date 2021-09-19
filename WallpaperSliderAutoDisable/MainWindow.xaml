@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:tb="http://www.hardcodet.net/taskbar"
+        xmlns:properties="clr-namespace:WallpaperSliderAutoDisable.Properties"
         mc:Ignorable="d"
         Visibility="Hidden"
         Title="MainWindow"
@@ -12,11 +13,16 @@
     <Grid>
         <tb:TaskbarIcon
             x:Name="MyNotifyIcon"
-            IconSource="/Icons/Test.ico">
+            IconSource="/Icons/Enabled.ico"
+            ToolTipText="{x:Static properties:Resources.Enabled}"
+            >
             <tb:TaskbarIcon.ContextMenu>
                 <ContextMenu>
                     <MenuItem
-                        Name="EnableItem"
+                        Name="AutoModeItem"
+                        Click="CheckBox_OnClick" />
+                    <MenuItem
+                        Name="ShortcutModeItem"
                         Click="CheckBox_OnClick" />
                     <MenuItem
                         Name="ExitItem"

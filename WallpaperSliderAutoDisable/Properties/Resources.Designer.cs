@@ -22,7 +22,7 @@ namespace WallpaperSliderAutoDisable.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace WallpaperSliderAutoDisable.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WallpaperSliderAutoDisable.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace WallpaperSliderAutoDisable.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,18 +61,18 @@ namespace WallpaperSliderAutoDisable.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disable.
+        ///   Looks up a localized string similar to Auto Mode.
         /// </summary>
-        internal static string Disable {
+        public static string AutoMode {
             get {
-                return ResourceManager.GetString("Disable", resourceCulture);
+                return ResourceManager.GetString("AutoMode", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Disable wallpaper.
         /// </summary>
-        internal static string disable_wallpaper {
+        public static string disable_wallpaper {
             get {
                 return ResourceManager.GetString("disable_wallpaper", resourceCulture);
             }
@@ -81,25 +81,16 @@ namespace WallpaperSliderAutoDisable.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Disabled.
         /// </summary>
-        internal static string Disabled {
+        public static string Disabled {
             get {
                 return ResourceManager.GetString("Disabled", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enable.
-        /// </summary>
-        internal static string Enable {
-            get {
-                return ResourceManager.GetString("Enable", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Enable wallpaper.
         /// </summary>
-        internal static string enable_wallpaper {
+        public static string enable_wallpaper {
             get {
                 return ResourceManager.GetString("enable_wallpaper", resourceCulture);
             }
@@ -108,7 +99,7 @@ namespace WallpaperSliderAutoDisable.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Enabled.
         /// </summary>
-        internal static string Enabled {
+        public static string Enabled {
             get {
                 return ResourceManager.GetString("Enabled", resourceCulture);
             }
@@ -117,7 +108,7 @@ namespace WallpaperSliderAutoDisable.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
-        internal static string Exit {
+        public static string Exit {
             get {
                 return ResourceManager.GetString("Exit", resourceCulture);
             }
@@ -126,7 +117,7 @@ namespace WallpaperSliderAutoDisable.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Fullscreen: {0}.
         /// </summary>
-        internal static string fullscreen_fmt {
+        public static string fullscreen_fmt {
             get {
                 return ResourceManager.GetString("fullscreen_fmt", resourceCulture);
             }
@@ -135,7 +126,7 @@ namespace WallpaperSliderAutoDisable.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Failed to get user notification state, ret {0}.
         /// </summary>
-        internal static string get_user_notification_state {
+        public static string get_user_notification_state {
             get {
                 return ResourceManager.GetString("get_user_notification_state", resourceCulture);
             }
@@ -144,9 +135,27 @@ namespace WallpaperSliderAutoDisable.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Not enabled, ignore fullscreen event.
         /// </summary>
-        internal static string ignore_fullscreen_event {
+        public static string ignore_fullscreen_event {
             get {
                 return ResourceManager.GetString("ignore_fullscreen_event", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Shortcut Mode.
+        /// </summary>
+        public static string ShortcutMode {
+            get {
+                return ResourceManager.GetString("ShortcutMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Switch status: {0}.
+        /// </summary>
+        public static string switch_status {
+            get {
+                return ResourceManager.GetString("switch_status", resourceCulture);
             }
         }
     }
