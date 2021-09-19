@@ -5,15 +5,25 @@ Because wallpaper switching will cause game stuck for about one second which is 
 
 ## Usage
 
-Run exe
+### Auto Mode
+
+This program will try to disable your wallpaper when it detects fullscreen app automatically
+
+Default delay is 5000ms and you can modify it in app conf, the key is `delay`, value is number in ms
+
+### Shortcut Mode
+
+This program will toggle between enable and disable your wallpaper when you hit the shortcut
+
+Default shortcut is `ctrl+alt+g` and you can modify it in app conf, the key is `delay`, value is `m_key1+m_key2+...+key` (m_keys are: `ctrl alt win shift`)
 
 > NOTE: You'd better exit when you exit game because it regard some other fullscreen application as game too 
 > The api is [SHQueryUserNotificationState](https://docs.microsoft.com/en-us/windows/win32/api/shellapi/nf-shellapi-shqueryusernotificationstate)
 
-## Thanks
+## Thanks And Dependencies
 
-This project has a dependency: [wpf-notifyicon](https://github.com/hardcodet/wpf-notifyicon)
-And the icon is from that project too
+- [wpf-notifyicon](https://github.com/hardcodet/wpf-notifyicon)
+- [NLog](https://github.com/NLog/NLog)
 
 ## License
 
